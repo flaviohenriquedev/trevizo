@@ -8,7 +8,7 @@ import { store } from "@/data/store";
 
 export function Footer() {
   return (
-    <footer className="mt-6 bg-brand text-white">
+    <footer className="bg-brand text-white">
       <Container className="grid gap-10 py-10 sm:grid-cols-2 lg:grid-cols-5">
         <div>
           <Logo variant="footer" />

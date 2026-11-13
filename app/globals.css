@@ -27,8 +27,16 @@ body {
   color: #ffffff;
 }
 
+button:not(:disabled),
+input[type="button"]:not(:disabled),
+input[type="submit"]:not(:disabled),
+input[type="reset"]:not(:disabled) {
+  cursor: pointer;
+}
+
 #site-scroll {
   scrollbar-color: #c5c9da transparent;
+  scrollbar-gutter: auto;
 }
 
 #site-scroll::-webkit-scrollbar {

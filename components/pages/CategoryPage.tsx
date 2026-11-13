@@ -22,7 +22,7 @@ export function CategoryPage({ slug }: { slug: string }) {
   );
 
   return (
-    <Container className="py-6 md:py-8">
+    <Container className="pt-6 pb-4 md:pt-8">
       <Breadcrumb items={[{ label: category.name }]} />
       <h1 className="text-3xl font-extrabold text-ink">{category.name}</h1>
       <p className="mt-2 max-w-2xl text-muted">{category.description}</p>

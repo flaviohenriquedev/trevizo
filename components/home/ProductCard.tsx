@@ -7,20 +7,23 @@ import { discountOf, type Product } from "@/types/product";
 
 export function ProductCard({ product }: { product: Product }) {
   return (
-    <article className="flex h-full flex-col rounded-2xl border border-line bg-white p-3 shadow-card transition hover:-translate-y-0.5 hover:shadow-md">
+    <article className="flex h-full flex-col rounded-2xl border border-line bg-white p-1.5 shadow-card transition hover:-translate-y-0.5 hover:shadow-md">
       <div className="relative">
-        <Link href={`/produto/${product.slug}`} className="relative block aspect-square overflow-hidden rounded-xl bg-white">
+        <Link
+          href={`/produto/${product.slug}`}
+          className="relative block aspect-square overflow-hidden rounded-xl border border-line bg-white"
+        >
           <Image
             src={product.image}
             alt={product.imageAlt}
             fill
             sizes="(max-width: 640px) 50vw, 20vw"
-            className="object-contain p-3"
+            className="object-contain p-2"
           />
         </Link>
         <DiscountBadge value={discountOf(product)} />
       </div>
-      <div className="mt-3 flex flex-1 flex-col">
+      <div className="mt-2 flex flex-1 flex-col px-1.5 pb-1.5">
         <h3 className="font-semibold text-ink">
           <Link href={`/produto/${product.slug}`} className="hover:text-brand">
             {product.name}
@@ -30,7 +33,7 @@ export function ProductCard({ product }: { product: Product }) {
         <div className="mt-2">
           <Price price={product.price} originalPrice={product.originalPrice} />
         </div>
-        <div className="mt-auto pt-3">
+        <div className="mt-auto pt-2">
           <AddToCartButton productId={product.id} />
         </div>
       </div>

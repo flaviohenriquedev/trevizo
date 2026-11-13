@@ -43,18 +43,18 @@ export function Navigation() {
 
   return (
     <nav className="relative hidden border-t border-line lg:block" aria-label="Categorias">
-      <Container className="flex flex-wrap items-center gap-x-1">
+      <Container className="flex flex-wrap items-center justify-center gap-x-1">
         <div ref={panelRef} className="relative">
           <button
             type="button"
-            className="inline-flex items-center gap-2 rounded-lg px-3 py-3 text-sm font-semibold text-brand"
+            className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-3 text-[13px] font-semibold text-brand"
             aria-expanded={open}
             aria-controls="category-menu"
             onClick={() => setOpen((current) => !current)}
           >
-            <Menu className="size-4" aria-hidden />
+            <Menu className="size-3.5" aria-hidden />
             Todas as Categorias
-            <ChevronDown className={cn("size-4 transition", open && "rotate-180")} aria-hidden />
+            <ChevronDown className={cn("size-3.5 transition", open && "rotate-180")} aria-hidden />
           </button>
           {open ? (
             <div
@@ -99,7 +99,7 @@ export function Navigation() {
               href={link.href}
               aria-current={active ? "page" : undefined}
               className={cn(
-                "rounded-lg px-3 py-3 text-sm font-semibold transition hover:text-accent",
+                "rounded-lg px-2.5 py-3 text-[13px] font-semibold transition hover:text-accent",
                 active ? "text-accent" : "text-brand",
               )}
             >
