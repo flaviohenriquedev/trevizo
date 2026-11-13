@@ -27,7 +27,9 @@ export function TopBar() {
             <span className="hidden min-[420px]:inline">Entrar ou Cadastrar</span>
             <span className="min-[420px]:hidden">Entrar</span>
           </Link>
-          <CartButton className="hidden md:inline-flex" />
+          <span className="hidden md:inline-flex">
+            <CartButton />
+          </span>
         </div>
       </Container>
     </div>
